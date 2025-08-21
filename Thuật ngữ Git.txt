@@ -1,0 +1,49 @@
+Thuật ngữ Git
+
+
+- Repository (Repo): Kho lưu trữ chứa toàn bộ lịch sử của dự án, bao gồm các tệp và phiên bản.
+- Branch: Nhánh trong Git dùng để phát triển tính năng hoặc sửa lỗi mà không ảnh hưởng đến nhánh chính.
+- Conflict: Xung đột xảy ra khi có sự thay đổi khác nhau giữa hai nhánh trong cùng một tệp.
+- Local: Kho lưu trữ Git trên máy tính của bạn.
+- Remote: Kho lưu trữ Git trên máy chủ từ xa (ví dụ: GitHub, GitLab).
+- Fork: Sao chép một repository từ người khác sang tài khoản Git của bạn để phát triển riêng.
+
+Các lệnh Git cơ bản
+- git init: Khởi tạo một repository Git mới trong thư mục hiện tại.
+- git status: Kiểm tra trạng thái của repository, xem có tệp nào thay đổi hoặc chưa được thêm vào Git.
+- git add {file name}: Thêm một tệp cụ thể vào khu vực staging để chuẩn bị commit.
+- git add .: Thêm tất cả các tệp đã thay đổi vào khu vực staging.
+- git reset: Hủy bỏ các thay đổi trong khu vực staging, đưa tệp về trạng thái trước đó.
+- git commit -m "message": Ghi lại các thay đổi với một thông điệp mô tả.
+- git checkout {branch name}: Chuyển sang một nhánh cụ thể.
+- git branch: Hiển thị danh sách tất cả các nhánh trong repository.
+- git checkout -b {branch name}: Tạo một nhánh mới và chuyển sang nhánh đó ngay lập tức.
+- git merge {branch name}: Hợp nhất một nhánh vào nhánh hiện tại.
+- git branch -d {branch name}: Xóa một nhánh đã hoàn thành.
+- git push: Đẩy các thay đổi từ repository local lên repository remote.
+- git remote add origin {repo url}: Liên kết repository local với repository remote trên GitHub/GitLab.
+- git push origin {branch name}: Đẩy nhánh hiện tại lên repository remote.
+- git clone {repo url}: Sao chép một repository từ GitHub/GitLab về máy local.
+- git fetch origin: Lấy thông tin mới nhất từ repository remote mà không hợp nhất vào nhánh hiện tại.
+- git checkout -b {branch name} origin/{branch name}: Tạo một nhánh mới từ một nhánh từ xa và chuyển sang nó.
+
+
+*Note lệnh làm việc nhóm dùng GitHub
+
+1.git clone (link url repo)
+2.git pull - kéo code mới nhất của người khác về máy và test
+3. git checkout -b ( tên nhánh ) - lệnh này để tạo 1 nhánh mới chơi chơi không ảnh hưởng đến code chính cuối cùng 
+4.git branch - kiểm tra có những nhánh nào trên repo GitHub
+5.git checkout + tên nhánh - lệnh này để chuyển giữa các nhánh 
+
+
+* lệnh để đẩy git lên github chung
+1. git init
+2. git add . : lệnh này là đẩy toàn bộ lên dùng 1 commit
+   git add + tên file : đẩy riêng từng file
+3. git commit -m ' ghi chú gì đấy cho dễ nhớ' 
+
+4. Trước khi đẩy code thì check "git status" xem đang ở đâu ròi mới gõ lệnh: 
+
+   git push origin main - là đẩy lên nhánh main 
+   git push origin + tên nhánh khác - đẩy này nghịch oke nó tách riêng không lo conflict code 
